@@ -1,0 +1,44 @@
+DEBUG - 2026-10-06 09:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-06 09:13:24 --> Modules\Evaluation\Domain\Exception\InvalidEvaluation: Ce groupe a déjà évalué ce groupe.
+[Method: POST, Route: evaluations]
+in APPPATH/Modules/Evaluation/Domain/Exception/InvalidEvaluation.php on line 28.
+ 1 APPPATH/Modules/Evaluation/Application/UseCase/RecordEvaluation.php(48): Modules\Evaluation\Domain\Exception\InvalidEvaluation::alreadyEvaluated()
+ 2 APPPATH/Modules/Evaluation/UI/Controllers/EvaluationController.php(40): Modules\Evaluation\Application\UseCase\RecordEvaluation->__invoke(13, 17, '2', '2', '2', '1', 'rien')
+ 3 SYSTEMPATH/CodeIgniter.php(974): Modules\Evaluation\UI\Controllers\EvaluationController->store()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(Modules\Evaluation\UI\Controllers\EvaluationController))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 09:14:08 --> Modules\Evaluation\Domain\Exception\InvalidEvaluation: Ce groupe a déjà évalué ce groupe.
+[Method: POST, Route: evaluations]
+in APPPATH/Modules/Evaluation/Domain/Exception/InvalidEvaluation.php on line 28.
+ 1 APPPATH/Modules/Evaluation/Application/UseCase/RecordEvaluation.php(48): Modules\Evaluation\Domain\Exception\InvalidEvaluation::alreadyEvaluated()
+ 2 APPPATH/Modules/Evaluation/UI/Controllers/EvaluationController.php(40): Modules\Evaluation\Application\UseCase\RecordEvaluation->__invoke(13, 17, '2', '2', '2', '1', 'rien')
+ 3 SYSTEMPATH/CodeIgniter.php(974): Modules\Evaluation\UI\Controllers\EvaluationController->store()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(Modules\Evaluation\UI\Controllers\EvaluationController))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-06 10:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-06 10:44:45 --> Modules\Evaluation\Domain\Exception\InvalidEvaluation: Ce groupe a déjà évalué ce groupe.
+[Method: POST, Route: evaluations]
+in APPPATH/Modules/Evaluation/Domain/Exception/InvalidEvaluation.php on line 28.
+ 1 APPPATH/Modules/Evaluation/Application/UseCase/RecordEvaluation.php(48): Modules\Evaluation\Domain\Exception\InvalidEvaluation::alreadyEvaluated()
+ 2 APPPATH/Modules/Evaluation/UI/Controllers/EvaluationController.php(40): Modules\Evaluation\Application\UseCase\RecordEvaluation->__invoke(13, 17, '2', '2', '2', '1', null)
+ 3 SYSTEMPATH/CodeIgniter.php(974): Modules\Evaluation\UI\Controllers\EvaluationController->store()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(Modules\Evaluation\UI\Controllers\EvaluationController))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-06 10:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 10:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 10:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 10:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 11:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 11:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 11:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 11:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-06 11:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

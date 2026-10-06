@@ -1,0 +1,21 @@
+**Correction de français :** rien à corriger cette fois, ton message est composé de tes choix de réponses.
+
+**To-do list (CI4 + DDD + MySQL + Docker)**
+
+La version utilisable (MVP) va de l'étape 0 à l'étape 6. À chaque étape, je te donne le code, tu le testes, et on passe à la suivante.
+
+| # | Étape | Ce que je te livre | Tu vérifies |
+|---|---|---|---|
+| 0 | **Docker + projet CI4** | `docker-compose.yml` (PHP/Apache, MySQL, phpMyAdmin) et création du projet | La page d'accueil CI4 s'affiche |
+| 1 | **Squelette DDD** | Dossiers `Domain / Application / Infrastructure / UI` dans un module `Evaluation`, autoload et routes | Une route de test répond |
+| 2 | **Base de données** | Migrations : `groups`, `members`, `evaluations` (4 notes + note enseignant à 0 + remarque) | Les tables existent dans phpMyAdmin |
+| 3 | **Domaine métier** | Règles : note de 0 à 2 par pas de 0,5, total /10 calculé, un groupe ne s'évalue pas lui-même | Tests unitaires verts |
+| 4 | **Import de ton Sheets** | Commande CLI qui charge groupes, membres et les 6 évaluations depuis un CSV | Les données sont en base |
+| 5 | **Écran « Nouvelle évaluation »** | Le parcours en boutons (groupes → notes → remarque → récapitulatif) | Tu saisis une 7e évaluation |
+| 6 | **Page Classement** | Moyenne et rang par groupe évalué | Les résultats correspondent au Sheets (7, 6,5, 5,5, 4,5, 4,25, 3,5) |
+| 7 | **Note de l'enseignant** | Écran pour la compléter après coup | Le total change |
+| 8 | **Historique, modification, export CSV** | Liste, correction d'une évaluation, sortie vers Sheets | Export lisible |
+| 9 | **Plus tard** | Connexion (login), puis intégration dans attendance | |
+
+**Pour démarrer l'étape 0**, exporte ta feuille « Données » et ta feuille « Groupes » en CSV (Fichier → Télécharger → CSV) : on en aura besoin à l'étape 4.
+

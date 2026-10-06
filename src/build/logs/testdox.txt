@@ -1,0 +1,50 @@
+Csv Reader (Tests\Unit\Modules\Evaluation\Infrastructure\CsvReader)
+ [x] Skips header and keeps french decimals as text
+ [x] Ignores extra columns and pads missing ones
+ [x] Skips empty rows
+ [x] Trims spaces
+ [x] Throws when file is missing
+
+Evaluation (Tests\Unit\Modules\Evaluation\Domain\Evaluation)
+ [x] Total matches the sheet with data set "Extra Pizza → Eau Vive"
+ [x] Total matches the sheet with data set "Colagate → Star"
+ [x] Total matches the sheet with data set "Alpha Ciment → Airtel"
+ [x] Total matches the sheet with data set "Aigle d'or → Coca Cola 1"
+ [x] Total matches the sheet with data set "Ibaneze → Coca Cola 2"
+ [x] Total matches the sheet with data set "Star → Star (THB)"
+ [x] Teacher score is zero by default
+ [x] Teacher score can be added later without changing the original
+ [x] Group cannot evaluate itself
+ [x] Remark is trimmed and empty becomes null
+ [x] Remark cannot be too long
+
+Ranking Calculator (Tests\Unit\Modules\Evaluation\Domain\Service\RankingCalculator)
+ [x] Compute with data set "jeu de données réel"
+ [x] Compute with data set "égalité partagée"
+ [x] Compute with data set "moyennes multiples"
+
+Record Evaluation (Tests\Unit\Modules\Evaluation\Application\RecordEvaluation)
+ [x] Records a valid evaluation
+ [x] Rejects an unknown group
+ [x] Rejects a duplicate evaluation
+ [x] Rejects self evaluation
+ [x] Rejects an invalid score
+
+Score (Tests\Unit\Modules\Evaluation\Domain\Score)
+ [x] Accepts valid scores with data set "zéro"
+ [x] Accepts valid scores with data set "quart"
+ [x] Accepts valid scores with data set "demi"
+ [x] Accepts valid scores with data set "un"
+ [x] Accepts valid scores with data set "un quart (Sheets)"
+ [x] Accepts valid scores with data set "virgule française"
+ [x] Accepts valid scores with data set "texte avec point"
+ [x] Accepts valid scores with data set "maximum"
+ [x] Rejects invalid scores with data set "négatif"
+ [x] Rejects invalid scores with data set "trop grand"
+ [x] Rejects invalid scores with data set "beaucoup"
+ [x] Rejects invalid scores with data set "pas de 0,25"
+ [x] Rejects invalid scores with data set "pas de 0,25 bis"
+ [x] Rejects invalid scores with data set "texte"
+ [x] Rejects invalid scores with data set "vide"
+ [x] Zero
+

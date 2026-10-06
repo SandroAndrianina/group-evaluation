@@ -1,0 +1,26 @@
+services:
+  app:
+    build: ./docker/php
+    ports: ["8080:80"]
+    volumes: ["./src:/var/www/html"]
+    depends_on: [db]
+
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: evaluation
+      MYSQL_USER: evaluation
+      MYSQL_PASSWORD: secret
+    ports: ["3307:3306"]
+    volumes: ["db_data:/var/lib/mysql"]
+
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      PMA_HOST: db
+    ports: ["8081:80"]
+    depends_on: [db]
+
+volumes:
+  db_data:

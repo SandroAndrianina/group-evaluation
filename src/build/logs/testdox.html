@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Csv Reader (Tests\Unit\Modules\Evaluation\Infrastructure\CsvReader)</h2>
+        <ul>
+            <li class="success">Skips header and keeps french decimals as text</li>
+            <li class="success">Ignores extra columns and pads missing ones</li>
+            <li class="success">Skips empty rows</li>
+            <li class="success">Trims spaces</li>
+            <li class="success">Throws when file is missing</li>
+        </ul>
+        <h2>Evaluation (Tests\Unit\Modules\Evaluation\Domain\Evaluation)</h2>
+        <ul>
+            <li class="success">Total matches the sheet with data set "Extra Pizza → Eau Vive"</li>
+            <li class="success">Total matches the sheet with data set "Colagate → Star"</li>
+            <li class="success">Total matches the sheet with data set "Alpha Ciment → Airtel"</li>
+            <li class="success">Total matches the sheet with data set "Aigle d'or → Coca Cola 1"</li>
+            <li class="success">Total matches the sheet with data set "Ibaneze → Coca Cola 2"</li>
+            <li class="success">Total matches the sheet with data set "Star → Star (THB)"</li>
+            <li class="success">Teacher score is zero by default</li>
+            <li class="success">Teacher score can be added later without changing the original</li>
+            <li class="success">Group cannot evaluate itself</li>
+            <li class="success">Remark is trimmed and empty becomes null</li>
+            <li class="success">Remark cannot be too long</li>
+        </ul>
+        <h2>Ranking Calculator (Tests\Unit\Modules\Evaluation\Domain\Service\RankingCalculator)</h2>
+        <ul>
+            <li class="success">Compute with data set "jeu de données réel"</li>
+            <li class="success">Compute with data set "égalité partagée"</li>
+            <li class="success">Compute with data set "moyennes multiples"</li>
+        </ul>
+        <h2>Record Evaluation (Tests\Unit\Modules\Evaluation\Application\RecordEvaluation)</h2>
+        <ul>
+            <li class="success">Records a valid evaluation</li>
+            <li class="success">Rejects an unknown group</li>
+            <li class="success">Rejects a duplicate evaluation</li>
+            <li class="success">Rejects self evaluation</li>
+            <li class="success">Rejects an invalid score</li>
+        </ul>
+        <h2>Score (Tests\Unit\Modules\Evaluation\Domain\Score)</h2>
+        <ul>
+            <li class="success">Accepts valid scores with data set "zéro"</li>
+            <li class="success">Accepts valid scores with data set "quart"</li>
+            <li class="success">Accepts valid scores with data set "demi"</li>
+            <li class="success">Accepts valid scores with data set "un"</li>
+            <li class="success">Accepts valid scores with data set "un quart (Sheets)"</li>
+            <li class="success">Accepts valid scores with data set "virgule française"</li>
+            <li class="success">Accepts valid scores with data set "texte avec point"</li>
+            <li class="success">Accepts valid scores with data set "maximum"</li>
+            <li class="success">Rejects invalid scores with data set "négatif"</li>
+            <li class="success">Rejects invalid scores with data set "trop grand"</li>
+            <li class="success">Rejects invalid scores with data set "beaucoup"</li>
+            <li class="success">Rejects invalid scores with data set "pas de 0,25"</li>
+            <li class="success">Rejects invalid scores with data set "pas de 0,25 bis"</li>
+            <li class="success">Rejects invalid scores with data set "texte"</li>
+            <li class="success">Rejects invalid scores with data set "vide"</li>
+            <li class="success">Zero</li>
+        </ul>
+    </body>
+</html>
