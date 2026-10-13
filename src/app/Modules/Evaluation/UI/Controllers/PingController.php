@@ -11,6 +11,11 @@ class PingController extends BaseController
 {
     public function index(): ResponseInterface
     {
-        return $this->response->setJSON(['module' => 'Evaluation', 'status' => 'ok']);
+        return $this->response->setJSON([
+            'module' => 'Evaluation',
+            'status' => 'ok',
+            'https'  => $this->request->isSecure(),
+            'host'   => $this->request->getServer('HTTP_HOST'),
+        ]);
     }
 }
