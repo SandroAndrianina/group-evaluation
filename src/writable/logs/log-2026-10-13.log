@@ -31,3 +31,655 @@ DEBUG - 2026-10-13 01:44:58 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-10-13 01:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-10-13 01:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-10-13 01:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 01:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-13 02:10:28 --> Table 'evaluation.student_groups' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('SELECT `id`
+FROM `student_groups`
+WHERE `name` = \'Eau Vive\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`
+FROM `student_groups`
+WHERE `name` = \'Eau Vive\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`
+FROM `student_groups`
+WHERE `name` = \'Eau Vive\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `id`
+FROM `student_groups`
+WHERE `name` = :name:', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(153): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Eau Vive')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:12:15 --> Table 'evaluation.student_groups' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('SELECT `id`
+FROM `student_groups`
+WHERE `name` = \'Eau Vive\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`
+FROM `student_groups`
+WHERE `name` = \'Eau Vive\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`
+FROM `student_groups`
+WHERE `name` = \'Eau Vive\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `id`
+FROM `student_groups`
+WHERE `name` = :name:', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(153): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Eau Vive')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Star\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Star\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Star\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Star')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4033\', \'Kajy\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4033\', \'Kajy\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4033\', \'Kajy\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4332\', \'Toky\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4332\', \'Toky\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4332\', \'Toky\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4071\', \'Lofo\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4071\', \'Lofo\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4071\', \'Lofo\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4165\', \'Nandrianina\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4165\', \'Nandrianina\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4165\', \'Nandrianina\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4267\', \'Dylane\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4267\', \'Dylane\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4267\', \'Dylane\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Airtel\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Airtel\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Airtel\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Airtel')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4254\', \'Tiary\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4254\', \'Tiary\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4254\', \'Tiary\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4257\', \'Mioty\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4257\', \'Mioty\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4257\', \'Mioty\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4051\', \'Mandresy\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4051\', \'Mandresy\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4051\', \'Mandresy\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4381\', \'Mihaja\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4381\', \'Mihaja\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4381\', \'Mihaja\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4247\', \'Tendry\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4247\', \'Tendry\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4247\', \'Tendry\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Coca Cola 1\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Coca Cola 1\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Coca Cola 1\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Coca Cola 1')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4217\', \'Tolotsoa\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4217\', \'Tolotsoa\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4217\', \'Tolotsoa\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4391\', \'Ianteherana\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4391\', \'Ianteherana\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4391\', \'Ianteherana\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4321\', \'Fitiavana\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4321\', \'Fitiavana\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4321\', \'Fitiavana\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4082\', \'Mahery\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4082\', \'Mahery\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4082\', \'Mahery\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4394\', \'Lucas\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4394\', \'Lucas\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4394\', \'Lucas\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Coca Cola 2\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Coca Cola 2\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Coca Cola 2\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Coca Cola 2')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4022\', \'Miora Angela\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4022\', \'Miora Angela\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4022\', \'Miora Angela\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4221\', \'Sharone\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4221\', \'Sharone\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4221\', \'Sharone\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4059\', \'Leila Soraya\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4059\', \'Leila Soraya\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4059\', \'Leila Soraya\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4352\', \'Aliah\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4352\', \'Aliah\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4352\', \'Aliah\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4259\', \'Paolah\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4259\', \'Paolah\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4259\', \'Paolah\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4274\', \'Tsara\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4274\', \'Tsara\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4274\', \'Tsara\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Star (THB)\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Star (THB)\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Star (THB)\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(53): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Star (THB)')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4336\', \'Lova\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4336\', \'Lova\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4336\', \'Lova\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4214\', \'Apinga\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4214\', \'Apinga\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4214\', \'Apinga\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4294\', \'Rajo\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4294\', \'Rajo\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4294\', \'Rajo\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`members`, CONSTRAINT `members_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `student_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4385\', \'Arnaut\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4385\', \'Arnaut\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (0, \'4385\', \'Arnaut\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `members` (`group_id`, `matricule`, `first_name`, `created_at`, `updated_at`) VALUES (:group_id:, :matricule:, :first_name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Extra Pizza\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Extra Pizza\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Extra Pizza\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(78): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Extra Pizza')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Cannot add or update a child row: a foreign key constraint fails (`evaluation`.`evaluations`, CONSTRAINT `evaluations_evaluator_group_id_foreign` FOREIGN KEY (`evaluator_group_id`) REFERENCES `student_groups` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `evaluations` (`evaluator_group_id`, `evaluated_group_id`, `score_presentation`, `score_swot`, `score_marketing`, `score_oral`, `score_teacher`, `remark`, `created_at`, `updated_at`) VALUES (0, 1, 1, 1, 1.5, 1, 0, NULL, \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `evaluations` (`evaluator_group_id`, `evaluated_group_id`, `score_presentation`, `score_swot`, `score_marketing`, `score_oral`, `score_teacher`, `remark`, `created_at`, `updated_at`) VALUES (0, 1, 1, 1, 1.5, 1, 0, NULL, \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `evaluations` (`evaluator_group_id`, `evaluated_group_id`, `score_presentation`, `score_swot`, `score_marketing`, `score_oral`, `score_teacher`, `remark`, `created_at`, `updated_at`) VALUES (0, 1, 1, 1, 1.5, 1, 0, NULL, \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `evaluations` (`evaluator_group_id`, `evaluated_group_id`, `score_presentation`, `score_swot`, `score_marketing`, `score_oral`, `score_teacher`, `remark`, `created_at`, `updated_at`) VALUES (:evaluator_group_id:, :evaluated_group_id:, :score_presentation:, :score_swot:, :score_marketing:, :score_oral:, :score_teacher:, :remark:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(106): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 7 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 8 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+ 9 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-13 02:16:14 --> Duplicate entry '' for key 'student_groups.code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Colagate\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Colagate\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (\'Colagate\', \'2026-10-13 02:16:14\', \'2026-10-13 02:16:14\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_groups` (`name`, `created_at`, `updated_at`) VALUES (:name:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(160): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Modules/Evaluation/Infrastructure/Import/SheetImporter.php(78): Modules\Evaluation\Infrastructure\Import\SheetImporter->groupId('Colagate')
+ 7 APPPATH/Modules/Evaluation/Infrastructure/Commands/ImportCommand.php(28): Modules\Evaluation\Infrastructure\Import\SheetImporter->import('/var/www/html/writable/import/groupes.csv', '/var/www/html/writable/import/donnees.csv', false)
+ 8 SYSTEMPATH/CLI/Commands.php(72): Modules\Evaluation\Infrastructure\Commands\ImportCommand->run([])
+ 9 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('evaluation:import', [])
+10 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+11 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+12 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-10-13 04:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 04:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-13 05:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -157,10 +157,13 @@ final class SheetImporter
         }
 
         $now = date('Y-m-d H:i:s');
-        $this->db->table('student_groups')->insert(['name' => $name, 'created_at' => $now, 'updated_at' => $now]);
-        $this->createdGroups++;
-
-        return $this->groupIds[$name] = (int) $this->db->insertID();
+        $next = (int) ($this->db->table('student_groups')->selectMax('id', 'max')->get()->getRowArray()['max'] ?? 0) + 1;
+        $this->db->table('student_groups')->insert([
+            'code'       => 'G' . $next,
+            'name'       => $name,
+            'created_at' => $now,
+            'updated_at' => $now,
+        ]);
     }
 
     /**

@@ -23,6 +23,7 @@ final class GroupController extends BaseController
             $g['members'] = count($repo->membersOf($g['id']));
             $g['evaluated'] = $repo->hasEvaluations($g['id']);
         }
+        unset($g);
         return view('Modules\Evaluation\UI\Views\group\index', ['groups' => $groups]);
     }
 

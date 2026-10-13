@@ -68,34 +68,39 @@ final class EvaluationController extends BaseController
 
         $totalsByGroup = [];
         foreach ($evaluations->allGroupedByEvaluated() as $groupId => $list) {
-            $totalsByGroup[$groupId] = array_map(
-                static fn ($e) => $e->total(),
-                $list,
-            );
+            $totalsByGroup[$groupId] = array_map(static fn ($e) => $e->total(), $list);
         }
 
         $ranked = (new RankingCalculator())->compute($totalsByGroup);
 
         $all = $groups->all();
-        $names = [];
+        $byId = [];
         foreach ($all as $g) {
-            $names[$g['id']] = $g['name'];
+            $byId[$g['id']] = $g;
         }
 
         $rows = [];
         $evaluatedIds = [];
         foreach ($ranked as $r) {
             $evaluatedIds[] = $r['groupId'];
+            $g = $byId[$r['groupId']] ?? null;
+            $members = $groups->membersOf($r['groupId']);
             $rows[] = [
-                'name'    => $names[$r['groupId']] ?? '?',
+                'code'    => $g['code'] ?? '—',
+                'name'    => $g['name'] ?? '?',
                 'average' => $r['average'],
                 'count'   => $r['count'],
                 'rank'    => $r['rank'],
+                'members' => $members,
             ];
         }
         foreach ($all as $g) {
             if (! in_array($g['id'], $evaluatedIds, true)) {
-                $rows[] = ['name' => $g['name'], 'average' => null, 'count' => 0, 'rank' => null];
+                $rows[] = [
+                    'code' => $g['code'] ?? '—', 'name' => $g['name'],
+                    'average' => null, 'count' => 0, 'rank' => null,
+                    'members' => $groups->membersOf($g['id']),
+                ];
             }
         }
 
@@ -103,31 +108,35 @@ final class EvaluationController extends BaseController
     }
 
     public function teacherList(): string
-    {
-        $db = \Config\Database::connect();
-        $groups = new MysqlGroupRepository($db);
-        $evaluations = new MysqlEvaluationRepository($db);
+{
+    $db = \Config\Database::connect();
+    $groups = new MysqlGroupRepository($db);
+    $evaluations = new MysqlEvaluationRepository($db);
 
-        $names = [];
-        foreach ($groups->all() as $g) {
-            $names[$g['id']] = $g['name'];
-        }
-
-        $rows = [];
-        foreach ($evaluations->allGroupedByEvaluated() as $list) {
-            foreach ($list as $e) {
-                $rows[] = [
-                    'id'        => $e->id(),
-                    'evaluator' => $names[$e->evaluatorGroupId()] ?? '?',
-                    'evaluated' => $names[$e->evaluatedGroupId()] ?? '?',
-                    'teacher'   => $e->teacher()->value(),
-                    'total'     => $e->total(),
-                ];
-            }
-        }
-
-        return view('Modules\Evaluation\UI\Views\evaluation\teacher_list', ['rows' => $rows]);
+    $byId = [];
+    foreach ($groups->all() as $g) {
+        $byId[$g['id']] = $g;
     }
+
+    $rows = [];
+    foreach ($evaluations->allGroupedByEvaluated() as $list) {
+        foreach ($list as $e) {
+            $ev = $byId[$e->evaluatorGroupId()] ?? null;
+            $ed = $byId[$e->evaluatedGroupId()] ?? null;
+            $rows[] = [
+                'id'             => $e->id(),
+                'evaluator_code' => $ev['code'] ?? '—',
+                'evaluator_name' => $ev['name'] ?? '?',
+                'evaluated_code' => $ed['code'] ?? '—',
+                'evaluated_name' => $ed['name'] ?? '?',
+                'teacher'        => $e->teacher()->value(),
+                'total'          => $e->total(),
+            ];
+        }
+    }
+
+    return view('Modules\Evaluation\UI\Views\evaluation\teacher_list', ['rows' => $rows]);
+}
 
     public function teacherForm(int $id): string|\CodeIgniter\HTTP\RedirectResponse
     {
@@ -176,19 +185,23 @@ final class EvaluationController extends BaseController
     $groups = new MysqlGroupRepository($db);
     $evaluations = new MysqlEvaluationRepository($db);
 
-    $names = [];
+    $byId = [];
     foreach ($groups->all() as $g) {
-        $names[$g['id']] = $g['name'];
+        $byId[$g['id']] = $g;
     }
 
     $rows = [];
     foreach ($evaluations->all() as $e) {
+        $ev = $byId[$e->evaluatorGroupId()] ?? null;
+        $ed = $byId[$e->evaluatedGroupId()] ?? null;
         $rows[] = [
-            'id'        => $e->id(),
-            'evaluator' => $names[$e->evaluatorGroupId()] ?? '?',
-            'evaluated' => $names[$e->evaluatedGroupId()] ?? '?',
-            'total'     => $e->total(),
-            'teacher'   => $e->teacher()->value(),
+            'id'               => $e->id(),
+            'evaluator_code'   => $ev['code'] ?? '—',
+            'evaluator_name'   => $ev['name'] ?? '?',
+            'evaluated_code'   => $ed['code'] ?? '—',
+            'evaluated_name'   => $ed['name'] ?? '?',
+            'total'            => $e->total(),
+            'teacher'          => $e->teacher()->value(),
         ];
     }
 
@@ -285,6 +298,49 @@ public function exportCsv(): \CodeIgniter\HTTP\ResponseInterface
             str_replace(';', ',', $names[$r['groupId']] ?? '?'),
             str_replace('.', ',', (string) $r['average']),
             $r['count'],
+        );
+    }
+
+    return $this->response
+        ->setHeader('Content-Type', 'text/csv; charset=utf-8')
+        ->setHeader('Content-Disposition', 'attachment; filename="classement.csv"')
+        ->setBody("\xEF\xBB\xBF" . $csv);
+}
+
+public function exportRankingCsv(): \CodeIgniter\HTTP\ResponseInterface
+{
+    $db = \Config\Database::connect();
+    $groups = new MysqlGroupRepository($db);
+    $evaluations = new MysqlEvaluationRepository($db);
+
+    $byId = [];
+    foreach ($groups->all() as $g) {
+        $byId[$g['id']] = $g;
+    }
+
+    $totalsByGroup = [];
+    foreach ($evaluations->allGroupedByEvaluated() as $gid => $list) {
+        $totalsByGroup[$gid] = array_map(static fn ($e) => $e->total(), $list);
+    }
+
+    $ranked = (new RankingCalculator())->compute($totalsByGroup);
+
+    $csv = "rang;code;groupe;moyenne;nb_evaluations;membres\n";
+    foreach ($ranked as $r) {
+        $g = $byId[$r['groupId']] ?? ['code' => '', 'name' => '?'];
+        $members = $groups->membersOf($r['groupId']);
+        $memberList = implode(' | ', array_map(
+            static fn ($m) => $m['matricule'] . ' ' . $m['first_name'],
+            $members,
+        ));
+        $csv .= sprintf(
+            "%d;%s;%s;%s;%d;%s\n",
+            $r['rank'],
+            $g['code'] ?? '',
+            str_replace(';', ',', $g['name']),
+            str_replace('.', ',', (string) $r['average']),
+            $r['count'],
+            str_replace(';', ',', $memberList),
         );
     }
 

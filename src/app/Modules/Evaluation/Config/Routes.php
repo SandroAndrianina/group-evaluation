@@ -24,4 +24,5 @@ $routes->group('evaluations', ['namespace' => 'Modules\Evaluation\UI\Controllers
     $routes->get('liste/(:num)', 'EvaluationController::edit/$1');
     $routes->post('liste/(:num)', 'EvaluationController::editStore/$1');
     $routes->get('liste/(:num)/supprimer', 'EvaluationController::destroy/$1');
+    $routes->get('classement/export-csv', 'EvaluationController::exportRankingCsv');
 });

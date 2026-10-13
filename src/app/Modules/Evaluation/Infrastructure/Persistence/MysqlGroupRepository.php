@@ -15,10 +15,14 @@ final class MysqlGroupRepository implements GroupRepository
 
     public function all(): array
     {
-        $rows = $this->db->table('student_groups')->select('id, name')->orderBy('name')->get()->getResultArray();
+        $rows = $this->db->table('student_groups')->select('id, code, name')->orderBy('code')->get()->getResultArray();
 
         return array_map(
-            static fn (array $r): array => ['id' => (int) $r['id'], 'name' => (string) $r['name']],
+            static fn (array $r): array => [
+                'id'   => (int) $r['id'],
+                'code' => (string) ($r['code'] ?? ''),
+                'name' => (string) $r['name'],
+            ],
             $rows,
         );
     }
@@ -51,8 +55,10 @@ final class MysqlGroupRepository implements GroupRepository
     public function create(string $name): int
     {
         $now = date('Y-m-d H:i:s');
+        $next = (int) ($this->db->table('student_groups')->selectMax('id', 'max')->get()->getRowArray()['max'] ?? 0) + 1;
         $this->db->table('student_groups')->insert([
-            'name' => $name, 'created_at' => $now, 'updated_at' => $now,
+            'code' => 'G' . $next, 'name' => $name,
+            'created_at' => $now, 'updated_at' => $now,
         ]);
         return (int) $this->db->insertID();
     }
