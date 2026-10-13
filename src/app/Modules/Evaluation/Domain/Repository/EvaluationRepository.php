@@ -19,4 +19,11 @@ interface EvaluationRepository
     public function find(int $id): ?Evaluation;
 
     public function updateTeacherScore(int $id, \Modules\Evaluation\Domain\ValueObject\Score $score): void;
+
+        /** @return list<Evaluation> */
+    public function all(): array;
+
+    public function delete(int $id): void;
+
+    public function update(int $id, \Modules\Evaluation\Domain\ValueObject\Score $presentation, \Modules\Evaluation\Domain\ValueObject\Score $swot, \Modules\Evaluation\Domain\ValueObject\Score $marketing, \Modules\Evaluation\Domain\ValueObject\Score $oral, ?string $remark): void;
 }

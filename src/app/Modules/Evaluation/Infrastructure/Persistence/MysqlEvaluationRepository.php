@@ -101,4 +101,41 @@ final class MysqlEvaluationRepository implements EvaluationRepository
             'updated_at'    => date('Y-m-d H:i:s'),
         ]);
     }
+
+        public function all(): array
+    {
+        $rows = $this->db->table('evaluations')->orderBy('id', 'DESC')->get()->getResultArray();
+        $out = [];
+        foreach ($rows as $row) {
+            $out[] = Evaluation::create(
+                (int) $row['evaluator_group_id'],
+                (int) $row['evaluated_group_id'],
+                Score::of($row['score_presentation']),
+                Score::of($row['score_swot']),
+                Score::of($row['score_marketing']),
+                Score::of($row['score_oral']),
+                Score::of($row['score_teacher']),
+                $row['remark'],
+                (int) $row['id'],
+            );
+        }
+        return $out;
+    }
+
+    public function delete(int $id): void
+    {
+        $this->db->table('evaluations')->where('id', $id)->delete();
+    }
+
+    public function update(int $id, Score $presentation, Score $swot, Score $marketing, Score $oral, ?string $remark): void
+    {
+        $this->db->table('evaluations')->where('id', $id)->update([
+            'score_presentation' => $presentation->value(),
+            'score_swot'         => $swot->value(),
+            'score_marketing'    => $marketing->value(),
+            'score_oral'         => $oral->value(),
+            'remark'             => $remark,
+            'updated_at'         => date('Y-m-d H:i:s'),
+        ]);
+    }
 }

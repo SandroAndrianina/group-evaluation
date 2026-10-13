@@ -169,4 +169,128 @@ final class EvaluationController extends BaseController
 
         return redirect()->to(site_url('evaluations/notes-enseignant'));
     }
+
+    public function adminList(): string
+{
+    $db = \Config\Database::connect();
+    $groups = new MysqlGroupRepository($db);
+    $evaluations = new MysqlEvaluationRepository($db);
+
+    $names = [];
+    foreach ($groups->all() as $g) {
+        $names[$g['id']] = $g['name'];
+    }
+
+    $rows = [];
+    foreach ($evaluations->all() as $e) {
+        $rows[] = [
+            'id'        => $e->id(),
+            'evaluator' => $names[$e->evaluatorGroupId()] ?? '?',
+            'evaluated' => $names[$e->evaluatedGroupId()] ?? '?',
+            'total'     => $e->total(),
+            'teacher'   => $e->teacher()->value(),
+        ];
+    }
+
+    return view('Modules\Evaluation\UI\Views\evaluation\admin_list', ['rows' => $rows]);
+}
+
+public function edit(int $id): string|\CodeIgniter\HTTP\RedirectResponse
+{
+    $db = \Config\Database::connect();
+    $repo = new MysqlEvaluationRepository($db);
+    $evaluation = $repo->find($id);
+    if ($evaluation === null) {
+        return redirect()->to(site_url('evaluations/liste'))->with('error', 'Évaluation introuvable.');
+    }
+
+    $groups = new MysqlGroupRepository($db);
+    $names = [];
+    foreach ($groups->all() as $g) {
+        $names[$g['id']] = $g['name'];
+    }
+
+    return view('Modules\Evaluation\UI\Views\evaluation\admin_edit', [
+        'id'        => $id,
+        'evaluator' => $names[$evaluation->evaluatorGroupId()] ?? '?',
+        'evaluated' => $names[$evaluation->evaluatedGroupId()] ?? '?',
+        'scores'    => [
+            'presentation' => $evaluation->presentation()->value(),
+            'swot'         => $evaluation->swot()->value(),
+            'marketing'    => $evaluation->marketing()->value(),
+            'oral'         => $evaluation->oral()->value(),
+        ],
+        'remark'    => $evaluation->remark(),
+    ]);
+}
+
+public function editStore(int $id): \CodeIgniter\HTTP\RedirectResponse
+{
+    $post = $this->request->getPost([
+        'score_presentation', 'score_swot', 'score_marketing', 'score_oral', 'remark',
+    ]);
+
+    try {
+        $p = \Modules\Evaluation\Domain\ValueObject\Score::of((string) $post['score_presentation']);
+        $s = \Modules\Evaluation\Domain\ValueObject\Score::of((string) $post['score_swot']);
+        $m = \Modules\Evaluation\Domain\ValueObject\Score::of((string) $post['score_marketing']);
+        $o = \Modules\Evaluation\Domain\ValueObject\Score::of((string) $post['score_oral']);
+    } catch (\DomainException $e) {
+        return redirect()->back()->with('error', $e->getMessage());
+    }
+
+    $remark = trim((string) ($post['remark'] ?? ''));
+    if ($remark === '') {
+        $remark = null;
+    } elseif (mb_strlen($remark) > 500) {
+        return redirect()->back()->with('error', 'Remarque trop longue (500 max).');
+    }
+
+    $db = \Config\Database::connect();
+    (new MysqlEvaluationRepository($db))->update($id, $p, $s, $m, $o, $remark);
+
+    return redirect()->to(site_url('evaluations/liste'))->with('success', 'Évaluation modifiée.');
+}
+
+public function destroy(int $id): \CodeIgniter\HTTP\RedirectResponse
+{
+    $db = \Config\Database::connect();
+    (new MysqlEvaluationRepository($db))->delete($id);
+    return redirect()->to(site_url('evaluations/liste'))->with('success', 'Évaluation supprimée.');
+}
+
+public function exportCsv(): \CodeIgniter\HTTP\ResponseInterface
+{
+    $db = \Config\Database::connect();
+    $groups = new MysqlGroupRepository($db);
+    $evaluations = new MysqlEvaluationRepository($db);
+
+    $names = [];
+    foreach ($groups->all() as $g) {
+        $names[$g['id']] = $g['name'];
+    }
+
+    $totalsByGroup = [];
+    foreach ($evaluations->allGroupedByEvaluated() as $gid => $list) {
+        $totalsByGroup[$gid] = array_map(static fn ($e) => $e->total(), $list);
+    }
+
+    $ranked = (new RankingCalculator())->compute($totalsByGroup);
+
+    $csv = "rang;groupe;moyenne;nb_evaluations\n";
+    foreach ($ranked as $r) {
+        $csv .= sprintf(
+            "%d;%s;%s;%d\n",
+            $r['rank'],
+            str_replace(';', ',', $names[$r['groupId']] ?? '?'),
+            str_replace('.', ',', (string) $r['average']),
+            $r['count'],
+        );
+    }
+
+    return $this->response
+        ->setHeader('Content-Type', 'text/csv; charset=utf-8')
+        ->setHeader('Content-Disposition', 'attachment; filename="classement.csv"')
+        ->setBody("\xEF\xBB\xBF" . $csv);
+}
 }

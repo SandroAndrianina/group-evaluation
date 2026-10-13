@@ -1,0 +1,81 @@
+:root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#6b7686; --brand:#1f3864; --line:#dfe3ea; }
+        * { box-sizing: border-box; }
+        body { margin:0; background:var(--bg); color:var(--ink);
+               font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+        .app { max-width:480px; margin:0 auto; padding:16px 16px 96px; }
+        h1 { font-size:1.25rem; margin:8px 0 4px; }
+        .sub { color:var(--muted); margin:0 0 8px; }
+        .steps { display:flex; gap:6px; margin:12px 0 20px; }
+        .steps i { flex:1; height:6px; border-radius:3px; background:var(--line); }
+        .steps i.on { background:var(--brand); }
+        label { display:block; font-weight:600; margin:16px 0 6px; }
+        select { width:100%; min-height:48px; font-size:1rem; padding:0 12px;
+                 border:1px solid var(--line); border-radius:10px; background:#fff; }
+        .card { background:var(--card); border:1px solid var(--line); border-radius:12px;
+                padding:12px 14px; margin-top:16px; }
+        .card h2 { font-size:.9rem; margin:0 0 6px; color:var(--muted); font-weight:600; }
+        .card ul { margin:0; padding-left:18px; }
+        .bar { position:fixed; left:0; right:0; bottom:0; background:#fff;
+               border-top:1px solid var(--line); padding:12px 16px; }
+        .bar .inner { max-width:480px; margin:0 auto; display:flex; gap:10px; }
+        button { flex:1; min-height:48px; border:0; border-radius:10px; font-size:1rem;
+                 font-weight:600; background:var(--brand); color:#fff; }
+        button.secondary { background:#e9ecf2; color:var(--ink); }
+        button:disabled { opacity:.4; }
+        .err { color:#b3261e; margin:8px 0 0; min-height:1.2em; }
+        .criteria { margin-bottom: 1rem; }
+        .criteria h2 { font-size: 1rem; margin: 0 0 .5rem; }
+        .criteria.teacher .scores button { background: #f3f4f6; color: #6b7280; }
+        .scores { display: flex; gap: .4rem; }
+        .scores button {
+            flex: 1; padding: .85rem 0; border: 1px solid #d1d5db;
+            background: #fff; border-radius: .5rem; font-size: 1rem; cursor: pointer;
+        }
+        .scores button[aria-pressed="true"] {
+            background: #2563eb; color: #fff; border-color: #2563eb;
+        }
+        .scores button:disabled { opacity: .7; cursor: default; }
+        .total { text-align: right; font-size: 1.25rem; margin-top: 1rem; }
+        .bar .inner { display: flex; gap: .5rem; }
+        .bar .inner button { flex: 1; }
+        textarea { width: 100%; padding: .6rem; border: 1px solid #d1d5db; border-radius: .5rem; font: inherit; box-sizing: border-box; }
+        .count { text-align: right; color: #6b7280; font-size: .85rem; margin: .25rem 0 1rem; }
+        .recap { display: grid; grid-template-columns: auto 1fr; gap: .4rem 1rem; margin: 0; }
+        .recap dt { color: #6b7280; }
+        .recap dd { margin: 0; text-align: right; }
+        .recap .strong { font-weight: 700; font-size: 1.1rem; }
+        .btn-primary, .btn-secondary { display: block; text-align: center; padding: .9rem; border-radius: .5rem; text-decoration: none; margin-bottom: .6rem; }
+        .btn-primary { background: #2563eb; color: #fff; }
+        .btn-secondary { background: #f3f4f6; color: #111; }
+        .ranking { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .ranking th, .ranking td { padding: .6rem .4rem; border-bottom: 1px solid #e5e7eb; text-align: left; }
+        .ranking th:first-child, .ranking td:first-child { width: 2rem; color: #6b7280; }
+        .ranking td:nth-child(3), .ranking td:last-child { text-align: right; }
+        .criteria .scores button.on { background: #2563eb; color: #fff; border-color: #2563eb; }
+        .nav {
+            display: flex; gap: .25rem; padding: .5rem;
+            background: #111; color: #fff; position: sticky; top: 0; z-index: 10;
+            overflow-x: auto;
+        }
+        .nav a {
+            color: #cbd5e1; text-decoration: none; padding: .5rem .75rem;
+            border-radius: .4rem; font-size: .9rem; white-space: nowrap;
+        }
+        .nav a.on { background: #2563eb; color: #fff; }
+        .container { padding: 1rem; max-width: 720px; margin: 0 auto; }
+        .flash { padding: .75rem 1rem; border-radius: .5rem; margin: 0 0 1rem; font-size: .9rem; }
+        .flash.ok { background: #dcfce7; color: #166534; }
+        .flash.err { background: #fee2e2; color: #991b1b; }
+        input[type=text] { width: 100%; padding: .6rem; border: 1px solid #d1d5db; border-radius: .5rem; font: inherit; box-sizing: border-box; margin-bottom: .5rem; }
+        .actions a { margin-right: .5rem; font-size: .85rem; }
+        .row { display: flex; gap: .5rem; margin-bottom: 1rem; }
+        .row input { margin-bottom: 0; }
+        .btn-primary { display: inline-block; padding: .6rem .9rem; background: #2563eb; color: #fff; border-radius: .5rem; text-decoration: none; margin-bottom: 1rem; }
+        .btn-secondary { display: inline-block; padding: .6rem .9rem; background: #f3f4f6; color: #111; border-radius: .5rem; text-decoration: none; }
+        .score-opt { flex: 1; }
+        .score-opt input { display: none; }
+        .score-opt span {
+            display: block; padding: .85rem 0; border: 1px solid #d1d5db;
+            background: #fff; border-radius: .5rem; text-align: center; cursor: pointer;
+        }
+        .score-opt input:checked + span { background: #2563eb; color: #fff; border-color: #2563eb; }
