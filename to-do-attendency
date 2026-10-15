@@ -1,0 +1,11 @@
+#	Étape	Ce que je te livre	Tu vérifies
+OK-0	Tunnel HTTPS	Installation de Cloudflare Tunnel, réglage de app.baseURL	Ton téléphone ouvre la page de test en https://
+OK-1	Base de données	Migrations : students, passkeys, attendance_sessions, challenges, attendances	Les tables existent dans phpMyAdmin
+OK-2	Liste de la classe	Commande attendance:import-students (CSV matricule + nom)	100 étudiants en base
+OK-3	Écran du chef	Mot de passe, boutons « Ouvrir l’appel » et « Fermer l’appel », liste des présents en direct	Tu ouvres et fermes un appel
+4	QR rotatif (10 s)	Jeton signé qui change toutes les 10 secondes, QR en grand sur l’écran du chef	Le QR change, un ancien jeton est refusé
+5	Première fois	Scan, choix du nom dans la liste, création de la passkey (Face ID/empreinte), présence marquée	Ton téléphone te marque présent
+6	Les fois suivantes	Scan, biométrie, signature du défi, vérifications serveur (passkey connue, signature valide, jeton frais, défi jamais utilisé, appel ouvert)	Un 2e passage fonctionne, un rejeu est refusé
+7	Contrôles anti-triche légers	Heure, IP et délai enregistrés, bouton « Tirer 5 présents au hasard » pour les vérifier en vrai	Le tirage s’affiche
+8	Export et historique	Liste des appels, export CSV (présents/absents)	Le CSV s’ouvre dans Sheets
+9	Essai réel	Test avec 5 téléphones (iPhone et Android), puis avec la classe	Pas de blocage à 100 scans en 1 minute

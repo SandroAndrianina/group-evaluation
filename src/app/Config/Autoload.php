@@ -41,6 +41,7 @@ class Autoload extends AutoloadConfig
         APP_NAMESPACE                      => APPPATH,
         'Modules\Evaluation'               => APPPATH . 'Modules/Evaluation',
         'Modules\Evaluation\Infrastructure' => APPPATH . 'Modules/Evaluation/Infrastructure',
+        'Modules\Attendance'                => APPPATH . 'Modules/Attendance',
     ];
 
     /**

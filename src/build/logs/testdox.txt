@@ -48,3 +48,10 @@ Score (Tests\Unit\Modules\Evaluation\Domain\Score)
  [x] Rejects invalid scores with data set "vide"
  [x] Zero
 
+Student Csv Parser (Tests\Unit\Modules\Attendance\StudentCsvParser)
+ [x] Builds students and ignores the timestamp
+ [x] Same student submitted twice is ignored
+ [x] Same etu for two different people is an error
+ [x] Invalid etu is an error
+ [x] Empty name is an error
+

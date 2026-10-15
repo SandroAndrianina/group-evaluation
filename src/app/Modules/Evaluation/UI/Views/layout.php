@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?= base_url('css/app.css') ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url('css/attendance.css') ?>">
 </head>
 <body>
 
@@ -21,6 +22,8 @@
         <a href="<?= site_url('evaluations/notes-enseignant') ?>" class="<?= str_contains(current_url(), 'notes-enseignant') ? 'on' : '' ?>">Enseignant</a>
         <a href="<?= site_url('evaluations/groupes') ?>" class="<?= str_contains(current_url(), 'groupes') ? 'on' : '' ?>">Groupes</a>
         <a href="<?= site_url('evaluations/liste') ?>" class="<?= str_contains(current_url(), '/liste') ? 'on' : '' ?>">Évaluations</a>
+        <a href="<?= site_url('attendance/admin') ?>" class="<?= str_contains(current_url(), 'attendance') ? 'on' : '' ?>">Présence</a>
+        <a href="<?= site_url('attendance/admin/chef') ?>"class="<?= str_contains(current_url(), '/chef') ? 'on' : '' ?>">Écran chef</a>
     </nav>
 </aside>
 

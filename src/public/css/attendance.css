@@ -1,0 +1,14 @@
+.att h1 { margin-top: 0; }
+.att .sub { color: #6b7686; margin: 0 0 8px; }
+.att label { display: block; font-weight: 600; margin: 16px 0 6px; }
+.att input[type=text], .att input[type=password] { width: 100%; min-height: 48px; font-size: 1rem; padding: 0 12px; border: 1px solid #dfe3ea; border-radius: 10px; background: #fff; }
+.att .actions { margin-top: 16px; }
+.att button { width: 100%; min-height: 48px; border: 0; border-radius: 10px; font-size: 1rem; font-weight: 600; background: #1f3864; color: #fff; cursor: pointer; }
+.att button.secondary { background: #e9ecf2; color: #1c2430; }
+.att .card { background: #fff; border: 1px solid #dfe3ea; border-radius: 12px; padding: 12px 14px; margin: 12px 0; }
+.att .count { font-size: 1.6rem; font-weight: 700; margin: 4px 0 0; }
+.att .list { list-style: none; margin: 12px 0; padding: 0; }
+.att .list li { background: #fff; border: 1px solid #dfe3ea; border-radius: 10px; padding: 10px 12px; margin-bottom: 6px; }
+.att .list li.flag { border-color: #b3261e; }
+.att .foot { margin-top: 32px; text-align: center; font-size: .9rem; }
+.att .foot a { color: #6b7686; }
