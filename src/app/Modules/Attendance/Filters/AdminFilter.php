@@ -16,7 +16,7 @@ final class AdminFilter implements FilterInterface
             return null;
         }
 
-        return redirect()->to('attendance/admin/login');
+        return redirect()->to(site_url('attendance/admin/login'));
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

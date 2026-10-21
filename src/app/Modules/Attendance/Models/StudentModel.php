@@ -10,6 +10,7 @@ final class StudentModel extends Model
 {
     protected $table         = 'students';
     protected $primaryKey    = 'id';
-    protected $allowedFields = ['matricule', 'name'];
-    protected $useTimestamps = true;
+    protected $returnType    = 'array';
+    protected $allowedFields = ['matricule', 'name', 'created_at', 'updated_at'];
+    protected $useTimestamps = false;
 }
